@@ -22,8 +22,7 @@ var mocha = require('gulp-mocha');
 var tldr = require('mocha-tldr-reporter');
 
 gulp.task('test', function() {
-  var config = require('../config').test;
-  gulp.src(config.src)
+  gulp.src('tests.js')
     .pipe(mocha({ reporter: tldr }));
 });
 ```
